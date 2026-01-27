@@ -1,0 +1,32 @@
+nohup: ignoring input
+::1 - - [27/Jan/2026 13:33:29] "GET / HTTP/1.1" 200 -
+::1 - - [27/Jan/2026 13:33:29] "GET / HTTP/1.1" 200 -
+----------------------------------------
+Exception occurred during processing of request from ('::1', 35184, 0, 0)
+::1 - - [27/Jan/2026 13:33:29] "GET /css/style.css HTTP/1.1" 200 -
+::1 - - [27/Jan/2026 13:33:29] "GET /images/hamza.png HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/server.py", line 1307, in finish_request
+    self.RequestHandlerClass(request, client_address, self,
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/server.py", line 672, in __init__
+    super().__init__(*args, **kwargs)
+  File "/data/data/com.termux/files/usr/lib/python3.12/socketserver.py", line 766, in __init__
+    self.handle()
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/server.py", line 679, in do_GET
+    self.copyfile(f, self.wfile)
+  File "/data/data/com.termux/files/usr/lib/python3.12/http/server.py", line 878, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "/data/data/com.termux/files/usr/lib/python3.12/shutil.py", line 204, in copyfileobj
+    fdst_write(buf)
+  File "/data/data/com.termux/files/usr/lib/python3.12/socketserver.py", line 845, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+::1 - - [27/Jan/2026 13:33:29] code 404, message File not found
+::1 - - [27/Jan/2026 13:33:29] "GET /favicon.ico HTTP/1.1" 404 -
